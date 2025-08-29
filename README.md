@@ -70,6 +70,8 @@ streamlit run app.py
 ```
 The app opens at http://localhost:8501. Upload a PDF and start asking questions.
 
+Note: You can also enter your Gemini API key directly in the app sidebar. It is stored only for your current browser session and is cleared when you close the tab.
+
 ---
 
 ## ⚙️ Configuration & Tuning

@@ -3,6 +3,7 @@ import streamlit as st
 from recruiter.config import get_api_key
 from recruiter.ui_scoring import render_scoring_tab
 from recruiter.ui_chat import render_chat_tab
+from recruiter.ui_candidates import render_candidates_tab
 
 
 # ---------- App Config ----------
@@ -26,10 +27,10 @@ with st.sidebar:
 
 
 st.title("Recruiter Assistant")
-tab_score, tab_chat = st.tabs(["Candidate Scoring", "Chat (PDF RAG)"])
+tab_score, tab_candidates = st.tabs(["Candidate Scoring", "Candidates"])
 
 with tab_score:
     render_scoring_tab(api_key=api_key, threshold=threshold)
 
-with tab_chat:
-    render_chat_tab(api_key=api_key, model_name=model)
+with tab_candidates:
+    render_candidates_tab()
