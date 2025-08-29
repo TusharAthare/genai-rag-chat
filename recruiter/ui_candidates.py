@@ -37,7 +37,19 @@ def render_candidates_tab():
                 st.write(f"Email: {email or '-'}  |  Phone: {phone or '-'}")
                 st.write(f"Score: {score:.2f}  |  JD: {jd_hash[:8] + '…' if jd_hash else '-'}  |  Saved: {created_at}")
                 if file_path:
-                    st.write(f"File: {Path(file_path).name}")
+                    p = Path(file_path)
+                    if p.is_file():
+                        with open(p, "rb") as fh:
+                            data = fh.read()
+                        st.download_button(
+                            label="Download resume (PDF)",
+                            data=data,
+                            file_name=p.name,
+                            mime="application/pdf",
+                            key=f"dl_{cid}",
+                        )
+                    else:
+                        st.caption("Resume file not found on disk.")
             with top_cols[1]:
                 if st.button("Delete", key=f"del_{cid}"):
                     deleted = delete_candidate(conn, cid)
