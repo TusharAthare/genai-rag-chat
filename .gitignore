@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+*.so
+*.dll
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Unit test / coverage reports
+.pytest_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+
+# Caches
+.cache/
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Streamlit
+.streamlit/secrets.toml
