@@ -23,6 +23,8 @@ dist/
 # Logs and databases
 *.log
 *.sqlite3
+*.db
+uploads/
 
 # Unit test / coverage reports
 .pytest_cache/
